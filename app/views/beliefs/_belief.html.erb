@@ -1,0 +1,8 @@
+<li>
+  <span class="content"><%= belief.content %></span>
+  <% if current_user?(belief.user) %>
+    <%= link_to "delete", belief, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: belief.content %>
+  <% end %>
+</li>
