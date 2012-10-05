@@ -1,4 +1,5 @@
-@import "bootstrap.min.css";
+@import "bootstrap";
+/* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
 
@@ -52,6 +53,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+  color: $grayLight;
 }
 
 p {
@@ -84,11 +86,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayMediumLight;
+  color: $grayLight;
   a {
-    color: $grayMediumLight;
+    color: $gray;
     &:hover {
-      color: $grayMediumLight;
+      color: $grayDarker;
     }
   }
   small {
@@ -108,7 +110,7 @@ footer {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayMediumLight;
+    border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -132,15 +134,15 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $grayMediumLight;
-    color: grayMediumLight;
+    border-left: 1px solid $grayLighter;
+    color: gray;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: $grayMediumLight;
+      color: $blue;
     }
   }
   strong {
@@ -195,6 +197,23 @@ input, textarea, select, .uneditable-input {
   @extend .error;
 }
 
+
+
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
 /* beliefs */
 
 .beliefs {
@@ -209,8 +228,9 @@ input, textarea, select, .uneditable-input {
 .content {
   display: block;
 }
-
-
+.timestamp {
+  color: $grayLight;
+}
 .gravatar {
   float: left;
   margin-right: 10px;
